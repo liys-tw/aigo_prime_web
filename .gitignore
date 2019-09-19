@@ -1,5 +1,5 @@
 # checkpoint
-image_stylization/checkpoints/*.ckpt.*
+static/image_stylization/checkpoints/*.ckpt.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
