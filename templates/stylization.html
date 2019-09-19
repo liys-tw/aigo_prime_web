@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block title %}
+Image Stylization
+{% endblock %}
+{% block content %}
+<body>
+    <img src="{{ content_image }}" alt="Content Image" width="30%">
+</body>
+<body>
+    <img src="{{ style_image }}" alt="Style Image" width="30%">
+</body>
+<body>
+    <img src="{{ stylized_image }}" alt="Stylized Image" width="30%" align="right">
+</body>
+{% endblock %}

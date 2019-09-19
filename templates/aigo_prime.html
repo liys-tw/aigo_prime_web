@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AIGO - LIYS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reset.css') }}"  />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        body{
+            background-color: #eee;
+        }
+        .logo{
+            display: flex;
+        }
+        .logo img{
+            width: 250px;
+        }
+        .logo .comp{
+            margin: auto;
+        }
+        .logo .one{
+            width: 50%;
+        }
+        .logo .two{
+            width: 50%;
+        }
+        .logo .imgOne{
+            margin-left: 300px;
+            margin-top: 10%;
+        }
+        .logo .imgTwo{
+            margin-left: 80px;
+            margin-top: 11%;
+        }
+        .container{
+            display: flex;
+        }
+        .container .input{
+            width: 50%;
+        }
+        .container .input .speechContent{
+            padding-top: 40px;
+            padding-left: 190px;
+        }
+        .container .input span{
+            font-size: 20px;
+            padding-left: 350px;
+        }
+        .container .style{
+            width:50%;
+            padding-left: 50px;
+        }
+        .container .wrap{
+            display: flex;
+        }
+        .container .style img{
+            width:120px;
+            height:120px;
+            cursor: pointer;
+        }
+        .container .wrap .pic{
+            padding: 15px;
+        }
+        .submit{
+            width: 100%;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .submit span{
+            font-size: 20px;
+            border:1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            background-color:darkgray;
+            cursor: pointer;
+            color:#444;
+        }
+        .show .top{
+            text-align: center;
+            cursor: pointer;
+        }
+        .show .video{
+            text-align: center;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="logo">
+            <div class="comp one">
+                <img src="/static/images/aigo.png" alt="" class="imgOne">
+            </div>
+            <div class="comp two">
+                <img src="/static/images/prime.png" alt="" class="imgTwo">
+            </div>
+        </div>
+        <div class="container">
+            <div class="input">
+                <div class="speechContent">
+                    <textarea name="" id="" cols="55" rows="26" placeholder="Please input the speech content"></textarea>
+                </div>
+            </div>
+            <div class="style">
+                <div class="wrap">
+                    <div class="pic">
+                        <img src="/static/images/one.jpg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="/static/images/two.jpg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="/static/images/three.jpg" alt="">
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="pic">
+                        <img src="/static/images/four.jpg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="/static/images/five.jpg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="/static/images/six.jpg" alt="">
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="pic">
+                        <img src="/static/images/seven.jpg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="/static/images/eight.jpg" alt="">
+                    </div>
+                    <div class="pic">
+                        <img src="/static/images/nine.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="submit">
+            <span>Submit</span>
+        </div>
+    </div>
+    <div class="show" style="display: none;">
+        <div class="top">
+            <i class='fas fa-angle-up' style='font-size:60px; color:#444;'></i>
+        </div>
+        <div class="video">
+            <video width="50%" height="100%" controls>
+                <source src="/static/images/movie.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.submit').on('click', function(){
+                $('.cover').slideUp();
+                $('.show').css({
+                    'display':'block'
+                });
+            });
+            $('.top i').on('click', function(){
+                $('.show').slideDown();
+                $('.cover').slideDown();
+            });
+        });
+    </script>
+</body>
+</html>
